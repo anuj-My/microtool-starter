@@ -39,7 +39,8 @@ Phases 5–6 need the owner's accounts and money: give exact click-paths from `p
 1. Ask (once, together): working name, target domain (checking availability is the owner's job), folder name.
 2. Get a fresh copy from GitHub, so it's the latest starter on any device (works in bash and PowerShell):
    `git clone --depth 1 https://github.com/anuj-My/microtool-starter.git <name>`
-   Then inside it delete `.git/` and `playbook/` (the playbook lives only in the starter), and `git init -b main`.
+   Then inside it delete `.git/` and `playbook/` (the playbook lives only in the starter), replace `README.md`
+   (the starter's own guide) with `README.template.md` renamed to `README.md`, and `git init -b main`.
 3. **Update packages to the latest versions:**
    - `npm install next@latest eslint-config-next@latest react@latest react-dom@latest`, then `npm update`.
    - `npm outdated` lists what's left: new **major** versions (e.g. TypeScript, ESLint, Tailwind).
