@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+/* Design tokens. PLACEHOLDER values: a plain neutral so the starter imposes no look.
+   Replace them with the palette decided in DESIGN.md before building any UI.
+   Every colour in the UI comes from these; never hard-code a hex in a component.
+   Names follow shadcn/ui's convention (background, foreground, primary…), so `npx shadcn init`
+   picks them up without a second set of tokens. */
+:root {
+  --background: oklch(0.97 0.005 80);
+  --foreground: oklch(0.2 0.01 80);
+  --card: oklch(0.995 0.002 80);
+  --card-foreground: var(--foreground);
+  --muted: oklch(0.93 0.006 80);
+  --muted-foreground: oklch(0.47 0.01 80);
+  --primary: oklch(0.2 0.01 80);
+  --primary-foreground: oklch(0.97 0.005 80);
+  --accent: oklch(0.92 0.01 80);
+  --accent-foreground: var(--foreground);
+  --border: oklch(0.86 0.008 80);
+  --ring: oklch(0.2 0.01 80);
+  --destructive: oklch(0.55 0.2 27);
+  --radius: 0.5rem;
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --radius-lg: var(--radius);
+  /* Set in app/layout.tsx with next/font once DESIGN.md picks the faces. System fonts until then. */
+  --font-display: var(--font-display-face, ui-sans-serif), system-ui, sans-serif;
+  --font-sans: var(--font-body-face, ui-sans-serif), system-ui, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  text-wrap: balance;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Long-form text: guides, About, legal pages. */
+.prose-site {
+  line-height: 1.7;
+  max-width: 68ch;
+}
+.prose-site > * + * {
+  margin-top: 1em;
+}
+.prose-site h2 {
+  margin-top: 2em;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.prose-site h3 {
+  margin-top: 1.5em;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.prose-site a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose-site ul {
+  list-style: disc;
+  padding-left: 1.25em;
+}
+.prose-site ol {
+  list-style: decimal;
+  padding-left: 1.25em;
+}
+.prose-site li + li {
+  margin-top: 0.35em;
+}
+.prose-site table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em;
+}
+.prose-site th,
+.prose-site td {
+  border-bottom: 1px solid var(--border);
+  padding: 0.5em 0.75em 0.5em 0;
+  text-align: left;
+}

@@ -1,0 +1,14 @@
+// Cloudflare Workers config: serve the static export in out/ (built by `npm run build`).
+// No server code runs; Cloudflare serves the files directly, including public/_headers.
+{
+  // Change to the project's name (lowercase, dashes). It becomes <name>.<you>.workers.dev.
+  "name": "microtool",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./out",
+    // Unknown URLs get out/404.html with a 404 status.
+    "not_found_handling": "404-page",
+    // Pages are folders with index.html (trailingSlash: true in next.config.ts).
+    "html_handling": "auto-trailing-slash"
+  }
+}
