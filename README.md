@@ -1,8 +1,8 @@
 # {{SiteName}}
 
-> **Starter template.** This is `microtool-starter`. To start a new tool, copy the folder (without `node_modules`,
-> `.next`, `out`, `.git`), `git init`, then follow the `microtool` skill (say "start a new micro tool" to Claude).
-> Replace this README with the project's own using the outline below.
+> **Starter template.** This is `microtool-starter`. How to use it (new device setup, starting a tool):
+> **[playbook/README.md](playbook/README.md)**. In a new project, replace this README with the project's own
+> using the outline below.
 
 {{One paragraph: what the tool does, for whom, what makes it different.}}
 
