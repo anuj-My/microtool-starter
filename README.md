@@ -125,3 +125,7 @@ npm run deploy   # manual deploy to Cloudflare (normally: push to main)
 - If a project produces something every tool should have, ask Claude to port it here.
 - Every few months, update this repo's packages too: `npm outdated`, update, `npm run check`, commit.
   New projects update their own packages at creation anyway; this keeps the starting point close.
+
+## License
+
+[MIT](LICENSE). Use it, change it, build your own tools with it.
