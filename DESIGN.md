@@ -50,7 +50,8 @@ Light only / dark only / both: (pick one; "both" doubles the QA work, so only if
 - Layout at 375 px: (what's above the fold: input, result)
 - Layout at desktop:
 - Result presentation: (how the answer is made the most prominent thing)
-- Controls: (sliders? chips? steppers? which shadcn primitives, if any, and how they're restyled)
+- Controls: (sliders? chips? steppers? which shadcn components from `src/components/ui/`, and how they're restyled:
+  radius, borders, shadows, focus. Check them on `/ui/` in dev)
 
 ## 6. Signature details (1–3 only)
 

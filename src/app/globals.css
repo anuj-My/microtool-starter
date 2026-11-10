@@ -1,22 +1,32 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
 
 /* Design tokens. PLACEHOLDER values: a plain neutral so the starter imposes no look.
    Replace them with the palette decided in DESIGN.md before building any UI.
    Every colour in the UI comes from these; never hard-code a hex in a component.
-   Names follow shadcn/ui's convention (background, foreground, primary…), so `npx shadcn init`
-   picks them up without a second set of tokens. */
+   Names are shadcn/ui's, so components in src/components/ui/ use the site's palette with no extra setup.
+   `npx shadcn add` may append tokens a new component needs (chart-*, sidebar-*): set those from DESIGN.md too. */
 :root {
   --background: oklch(0.97 0.005 80);
   --foreground: oklch(0.2 0.01 80);
   --card: oklch(0.995 0.002 80);
   --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
   --muted: oklch(0.93 0.006 80);
   --muted-foreground: oklch(0.47 0.01 80);
   --primary: oklch(0.2 0.01 80);
   --primary-foreground: oklch(0.97 0.005 80);
+  --secondary: oklch(0.93 0.006 80);
+  --secondary-foreground: var(--foreground);
   --accent: oklch(0.92 0.01 80);
   --accent-foreground: var(--foreground);
   --border: oklch(0.86 0.008 80);
+  /* Form field borders: darker than --border so inputs meet 3:1 non-text contrast. */
+  --input: oklch(0.62 0.01 80);
   --ring: oklch(0.2 0.01 80);
   --destructive: oklch(0.55 0.2 27);
   --radius: 0.5rem;
@@ -28,19 +38,37 @@
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-border: var(--border);
+  --color-input: var(--input);
   --color-ring: var(--ring);
   --color-destructive: var(--destructive);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
   /* Set in app/layout.tsx with next/font once DESIGN.md picks the faces. System fonts until then. */
   --font-display: var(--font-display-face, ui-sans-serif), system-ui, sans-serif;
+  --font-heading: var(--font-display);
   --font-sans: var(--font-body-face, ui-sans-serif), system-ui, sans-serif;
+}
+
+/* shadcn components expect borders to default to --border. Dark mode is a DESIGN.md decision:
+   add a .dark block only if the site needs both themes. */
+@layer base {
+  * {
+    @apply border-border;
+  }
 }
 
 body {

@@ -1,5 +1,6 @@
 import { AdSlot } from "@/components/AdSlot";
 import { Faq, type FaqItem } from "@/components/Faq";
+import { Card, CardContent } from "@/components/ui/card";
 import { organization, jsonLd, pageMetadata } from "@/lib/seo";
 import { absoluteUrl, site } from "@/lib/site";
 
@@ -33,9 +34,12 @@ export default function Page() {
   return (
     <>
       <h1 className="text-3xl font-bold md:text-4xl">{site.tagline}</h1>
-      <section className="mt-6 rounded-lg border border-border bg-card p-6">
-        <p className="text-muted-foreground">The tool goes here.</p>
-      </section>
+      {/* Build the tool from src/components/ui/ (shadcn, restyled to DESIGN.md); see them all at /ui/ in dev. */}
+      <Card className="mt-6">
+        <CardContent>
+          <p className="text-muted-foreground">The tool goes here.</p>
+        </CardContent>
+      </Card>
 
       <AdSlot name="afterTool" />
 

@@ -17,8 +17,8 @@ It has two parts:
 
 ## What's in the starter
 
-**Stack:** Next.js 16 (App Router, static export) · React 19 · TypeScript · Tailwind CSS 4 · Cloudflare Workers
-static assets. No backend, no database, free hosting. shadcn/ui is added per project only when needed.
+**Stack:** Next.js 16 (App Router, static export) · React 19 · TypeScript · Tailwind CSS 4 · shadcn/ui ·
+Cloudflare Workers static assets. No backend, no database, free hosting.
 
 **Already built:**
 
@@ -28,6 +28,8 @@ static assets. No backend, no database, free hosting. shadcn/ui is added per pro
 - Share images (`og.png`), rendered at build time for the site and for each guide
 - AdSense: verification meta tag and `ads.txt` from one setting, plus ad slots that stay hidden until you're approved
 - A guides system: one file per guide, with index, sitemap and share image automatic
+- shadcn/ui components for the tool (button, card, input, label, select, slider, switch, tabs, tooltip), resized
+  to 44 px touch targets and using the site's colour tokens. `npm run dev` → `/ui/` shows them all
 - About, Contact, Privacy Policy (AdSense-ready) and Terms pages, plus a 404 page
 - Cloudflare config: `wrangler.jsonc`, plus `_headers` with long caching for build files
 - Tests for the site settings, run with `npm run check`
@@ -98,7 +100,7 @@ Other things to say inside a project:
 | Say | What happens |
 |---|---|
 | "continue" | Next unticked step |
-| "design the site" | Hallmark themes → you pick one → `DESIGN.md` + colour and font settings |
+| "design the site" | Hallmark themes → you pick one → `DESIGN.md` + colour and font settings + shadcn components restyled |
 | "I'm ready to launch" | Domain, email, Cloudflare, Search Console, Bing, step by step |
 | "set up AdSense" | When to apply, what to change, what never to do |
 | "what should I write next?" | New pages picked from real searches and Search Console data |

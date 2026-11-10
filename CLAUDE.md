@@ -30,17 +30,23 @@ Read all three before starting work. Tick boxes `[x]` with the date when somethi
 that touches rendering. Before adding one, check it works with static export (no server APIs, no `next/image`
 optimizer, no route handlers that read the request).
 
-**shadcn/ui:** not installed by default. Add it only when the tool needs accessible interactive primitives
-that are tedious to hand-roll: dialog, popover, combobox/command, select, tabs, slider, tooltip, toast.
-`npx shadcn@latest init`, then `npx shadcn@latest add <component>` per component. The tokens in `globals.css` already use
-shadcn's names, so components inherit the site's palette. **Restyle every added component to DESIGN.md:**
-shadcn's default look (zinc grey, rounded-md, ring focus) is itself a recognisable template look.
-Simple things (buttons, inputs, cards, disclosure, FAQ) stay hand-written with `<details>`, `<button>`, etc.
+**shadcn/ui (installed):** the tool's UI is built from the components in `src/components/ui/` (Radix primitives,
+`components.json` style `radix-nova`, Lucide icons). Already added: button, card, input, label, select, slider,
+switch, tabs, tooltip. Add more with `npx shadcn@latest add <component>` (dialog, popover, command, sonner…).
+- They read the tokens in `globals.css` (shadcn's names), so the palette comes from DESIGN.md automatically.
+- **Restyle them to DESIGN.md** in the design phase: radius, borders, shadows, type. shadcn's default look is a
+  recognisable template look. The starter already raised every control to ≥ 44 px; keep that when restyling,
+  and re-check it on any component you add (shadcn's defaults are 28–36 px).
+- `npm run dev` → `/ui/` shows every component on one page (`(site)/ui/page.dev.tsx`, never built). Add new
+  components to it.
+- `npx shadcn add` may rewrite `globals.css` (grey tokens, a `.dark` block, Geist in `layout.tsx`). Check the
+  diff and keep the DESIGN.md values. Pin the versions it adds.
+- Text content stays server-rendered: the FAQ is `<details>` (not Accordion) so answers are in the static HTML.
 
 **Not allowed:** anything that needs a server at runtime (API routes reading the request, ISR, middleware,
 server actions), `next/image` optimisation (use `<img>` or `images.unoptimized`), Google Fonts CDN links
 (use `next/font`, self-hosted), Google Analytics (cookies → consent burden; use Cloudflare Web Analytics),
-CSS-in-JS libraries, component kits besides shadcn, state libraries (React state + URL params are enough).
+CSS-in-JS libraries, component kits besides shadcn, icon sets besides Lucide, state libraries (React state + URL params are enough).
 
 ## Folder structure
 
@@ -58,6 +64,7 @@ src/
     sitemap.ts robots.ts manifest.ts ads.txt/ og.png/ icon.svg apple-icon.tsx not-found.tsx
   components/
     *.tsx                   site-wide pieces: SiteChrome, Header, Footer, PageHeader, ProsePage, Faq, Breadcrumbs, AdSlot
+    ui/                     shadcn components (restyled to DESIGN.md); the tool is built from these
     tool/                   the tool's UI ("use client" components and hooks). Name the folder after the tool if you like (calculators/, generator/)
   content/
     guides/                 one .tsx file per guide exporting `guide`, registered in index.ts

@@ -26,8 +26,8 @@ Work in this order. Each phase ends with something written down in the project, 
 |---|---|---|---|
 | 0 | Validate the idea | "Why this idea" section in README.md + go/no-go | `references/research.md` |
 | 1 | Scaffold | New repo from the starter, `site.ts` filled, README features list | below |
-| 2 | Design | Filled DESIGN.md, tokens + fonts in code | `references/design.md` |
-| 3 | Build | Tool (logic tested in `src/lib`), landing pages, 5–10 guides, trust pages | starter `CLAUDE.md`, `references/seo.md` |
+| 2 | Design | Filled DESIGN.md, tokens + fonts in code, shadcn components restyled | `references/design.md` |
+| 3 | Build | Tool from `src/components/ui/` (logic tested in `src/lib`), landing pages, 5–10 guides, trust pages | starter `CLAUDE.md`, `references/seo.md` |
 | 4 | Pre-launch QA | `npm run check`, phone test, Hallmark audit, Lighthouse | `plan.md` Phase 0 |
 | 5 | Launch | Domain, email, Worker, Search Console, Bing, analytics | `plan.md` Phases 1–3 |
 | 6 | AdSense | Apply 2–4 weeks after launch | `plan.md` Phase 4 |

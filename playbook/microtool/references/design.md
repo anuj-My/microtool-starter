@@ -33,6 +33,9 @@ Hallmark's build mode writes standalone HTML/CSS, and these sites are Next.js + 
    The result of the tool gets the most visual weight on the page.
 4. **1–3 signature details**, no more. Everything else stays quiet.
 5. Show the owner the direction in words + a quick mock of the tool screen at 375 px before building pages.
+6. **Restyle the shadcn components** in `src/components/ui/` to the direction: radius, border weight, shadows,
+   button and input shape, focus style, slider thumb. Check them all on the dev-only `/ui/` page at 375 px.
+   Keep every control ≥ 44 px tall. Colours come from the tokens, so don't hard-code any in the components.
 
 ## Banned (the tells that make a site look AI-generated)
 
@@ -68,5 +71,6 @@ What good looks like instead:
 - Keyboard: every control reachable, focus visible
 - Contrast ≥ 4.5:1 for text (check muted text especially)
 - `prefers-reduced-motion` respected
+- shadcn components restyled (no zinc greys, no default radius/ring left), `/ui/` page checked at 375 px
 - Hallmark audit run and logged
 - Squint test: would someone recognise this site from a cropped screenshot? If not, the signature details are too weak.
