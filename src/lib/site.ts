@@ -8,7 +8,7 @@ export const site = {
   url: "https://example.com",
   contactEmail: "hello@example.com",
   // Who runs the site, shown on the About page. A real person is a trust signal for readers, Google and AdSense.
-  author: "Anuj",
+  author: "Your Name",
   // Date the data and guides were last checked. Update it when you review them.
   lastReviewed: "2026-01-01",
 

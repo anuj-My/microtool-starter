@@ -1,20 +1,22 @@
 ---
 name: microtool
-description: Anuj's playbook for building and launching ad-supported micro tool websites (free, no-signup browser tools like BackupCalc and ThumbFont). Use when starting a new micro tool or tool idea, validating an idea, scaffolding from microtool-starter, designing the UI (anti-AI-slop, Hallmark, DESIGN.md), buying a domain, deploying to Cloudflare Workers, Search Console/Bing, AdSense, or planning SEO content and growth for one of these sites.
+description: Playbook for building and launching ad-supported micro tool websites (free, no-signup, single-purpose browser tools) from the microtool-starter template. Use when starting a new micro tool or tool idea, validating an idea, scaffolding from microtool-starter, designing the UI (anti-AI-slop, Hallmark, DESIGN.md), buying a domain, deploying to Cloudflare Workers, Search Console/Bing, AdSense, or planning SEO content and growth for one of these sites.
 ---
 
 # Micro tool playbook
 
-The owner builds small, free, single-purpose browser tools that earn from AdSense (later affiliates).
-Two shipped examples to read when in doubt, if they're cloned on this device (read-only, never edit them from
-another project): `backupwatt` (BackupCalc, calculators; github.com/anuj-My/backupCalc) and `thumbfont`
-(ThumbFont, generator), usually beside the starter in the owner's projects folder.
+The user (called "the owner" below: they own the site) builds small, free, single-purpose browser tools that
+earn from AdSense (later affiliates). Two live sites built this way, useful as references for what the finished
+result looks like: backupcalc.com (calculators) and thumbfont.com (a generator). If the owner has shipped tools
+from the starter before and they're cloned on this device, read them when in doubt (read-only, never edit them
+from another project).
 
-The starter repo with the shared code, code standards and doc templates:
-**github.com/anuj-My/microtool-starter** (this skill's source is its `playbook/` folder). Its `CLAUDE.md` is the
-code standard (stack, folder structure, rules); its `plan.md` is the launch checklist; its `DESIGN.md` is the
-design template. Don't restate them; use them. The owner works on more than one device, so never assume a path:
-find the local clone (usually a sibling `microtool-starter` folder) or clone from GitHub.
+**The starter** is the repo this skill was installed from (this skill's source is its `playbook/` folder). Its
+`CLAUDE.md` is the code standard (stack, folder structure, rules); its `plan.md` is the launch checklist; its
+`DESIGN.md` is the design template. Don't restate them; use them. Never assume a path: find the local clone
+(usually a sibling `microtool-starter` folder). **Starter URL:** that clone's `git remote get-url origin`, which
+is the owner's fork if they forked it. If there's no local clone, ask; the original is
+github.com/anuj-My/microtool-starter.
 
 ## Phases
 
@@ -38,7 +40,7 @@ Phases 5–6 need the owner's accounts and money: give exact click-paths from `p
 
 1. Ask (once, together): working name, target domain (checking availability is the owner's job), folder name.
 2. Get a fresh copy from GitHub, so it's the latest starter on any device (works in bash and PowerShell):
-   `git clone --depth 1 https://github.com/anuj-My/microtool-starter.git <name>`
+   `git clone --depth 1 <starter URL> <name>`
    Then inside it delete `.git/` and `playbook/` (the playbook lives only in the starter), replace `README.md`
    (the starter's own guide) with `README.template.md` renamed to `README.md`, and `git init -b main`.
 3. **Update packages to the latest versions:**
@@ -60,6 +62,8 @@ Never modify the starter itself while working on a project. If a project produce
 should have (a component, a fix, a better checklist step), finish the project task, then **propose** porting it
 to the starter as a separate step and wait for a yes. Changes to this skill go in the starter's `playbook/microtool/`,
 then `node playbook/install.mjs` reinstalls it; commit and push so other devices get it with `git pull`.
+If the starter's origin isn't the owner's own repo (they cloned the original without forking), say they need a
+fork to keep starter changes, and don't push.
 
 ## Standing rules (apply in every phase)
 

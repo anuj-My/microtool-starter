@@ -62,10 +62,11 @@ microtool-starter/
 
 ## Setup on a new device (once)
 
-You need [Node.js](https://nodejs.org) 24+, git, and Claude Code.
+You need [Node.js](https://nodejs.org) 24+, git, and Claude Code. If you want to change the starter or the
+playbook for yourself, fork this repo first and clone your fork: new projects are copied from whatever you cloned.
 
 ```sh
-git clone https://github.com/anuj-My/microtool-starter.git
+git clone https://github.com/anuj-My/microtool-starter.git   # or your fork
 cd microtool-starter
 node playbook/install.mjs                                   # installs the microtool skill
 npx skills add nutlope/hallmark -g --agent claude-code      # design skill used in the design phase
