@@ -105,6 +105,9 @@ Other things to say inside a project:
 | "set up AdSense" | When to apply, what to change, what never to do |
 | "what should I write next?" | New pages picked from real searches and Search Console data |
 
+**Without Claude:** copy the repo, delete `.git/` and `playbook/`, rename `README.template.md` to `README.md`,
+then follow `CLAUDE.md`, `DESIGN.md` and `plan.md` yourself.
+
 ## Designing with Hallmark
 
 [Hallmark](https://github.com/nutlope/hallmark) is a free design skill for Claude Code. It's built to make pages
@@ -142,9 +145,6 @@ Chrome and `npm i -g puppeteer-core`; without them only its static checks run.
 
 Check the diff after a redesign or polish: Hallmark writes plain HTML/CSS by default, and this site must stay
 Next.js + Tailwind using `src/components/ui/`.
-
-**Without Claude:** copy the repo, delete `.git/` and `playbook/`, rename `README.template.md` to `README.md`,
-then follow `CLAUDE.md`, `DESIGN.md` and `plan.md` yourself.
 
 ---
 
