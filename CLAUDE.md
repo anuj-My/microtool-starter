@@ -39,6 +39,9 @@ switch, tabs, tooltip. Add more with `npx shadcn@latest add <component>` (dialog
   and re-check it on any component you add (shadcn's defaults are 28–36 px).
 - `npm run dev` → `/ui/` shows every component on one page (`(site)/ui/page.dev.tsx`, never built). Add new
   components to it.
+- When `shadcn add` asks to **overwrite** an existing component (e.g. `button.tsx`, pulled in by dialog), answer
+  **No**: overwriting throws away the 44 px sizing and the DESIGN.md restyle. Never pass `--overwrite`. From a
+  non-interactive shell: `printf 'n\n' | npx shadcn@latest add <component>`.
 - `npx shadcn add` may rewrite `globals.css` (grey tokens, a `.dark` block, Geist in `layout.tsx`). Check the
   diff and keep the DESIGN.md values. Pin the versions it adds.
 - Text content stays server-rendered: the FAQ is `<details>` (not Accordion) so answers are in the static HTML.
