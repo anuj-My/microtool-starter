@@ -13,8 +13,8 @@
 ## 2. Direction
 
 One sentence that a stranger could picture, rooted in the tool's subject, not "clean and modern".
-(BackupCalc: "a blueprint / engineer's worksheet: warm paper, ink outlines, amber highlights".
-ThumbFont: "a dark studio stage where the thumbnails are the brightest thing on screen".)
+(e.g. a power calculator: "a blueprint / engineer's worksheet: warm paper, ink outlines, amber highlights".
+A thumbnail font generator: "a dark studio stage where the thumbnails are the brightest thing on screen".)
 
 - Direction:
 - Why it fits the subject:
@@ -55,8 +55,8 @@ Light only / dark only / both: (pick one; "both" doubles the QA work, so only if
 
 ## 6. Signature details (1–3 only)
 
-The few things that make it recognisable (BackupCalc: graph-paper banner, hard ink shadows on panels;
-ThumbFont: live thumbnails as the grid).
+The few things that make it recognisable (e.g. a graph-paper banner and hard ink shadows on panels; live
+thumbnails as the grid).
 
 ## 7. Banned here
 

@@ -1,9 +1,7 @@
 # microtool-starter
 
 A starter kit and playbook for **micro tool websites**: small, free, no-signup browser tools that earn from
-Google AdSense. It's what [BackupCalc](https://backupcalc.com) and [ThumbFont](https://thumbfont.com) were built
-with, turned into something reusable, so each new tool starts with the boring parts already done and the same
-process every time.
+Google AdSense. Each new tool starts with the boring parts already done and follows the same process every time.
 
 It has two parts:
 

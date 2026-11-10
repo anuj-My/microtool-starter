@@ -24,8 +24,8 @@ Hallmark's build mode writes standalone HTML/CSS, and these sites are Next.js + 
 ## Deciding the direction (fill DESIGN.md)
 
 1. **Ground it in the subject's real world.** What do the people and objects of this niche look like? Workshop
-   manuals, YouTube's own UI, a lab notebook, a receipt, a sports scoreboard, a seed packet. BackupCalc took
-   "engineer's worksheet / blueprint"; ThumbFont took "dark studio stage where thumbnails glow".
+   manuals, YouTube's own UI, a lab notebook, a receipt, a sports scoreboard, a seed packet. A power calculator
+   might take "engineer's worksheet / blueprint"; a thumbnail font tool "dark studio stage where thumbnails glow".
    A direction that could describe any SaaS ("clean, modern, friendly") is not a direction.
 2. **Pick type with a reason.** One display face with character + one readable body face (+ mono for numbers if
    the tool is numeric). Load with `next/font`. Check the scripts the audience types in are covered.

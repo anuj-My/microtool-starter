@@ -7,7 +7,7 @@ Article/WebApplication structured data). This file is about **what pages to make
 
 | Type | Targets | Example |
 |---|---|---|
-| Main tool (homepage) | the head term: "<x> generator/calculator" | ThumbFont homepage |
+| Main tool (homepage) | the head term: "<x> generator/calculator" | a font generator's homepage |
 | Tool variant / niche landing | "<x> for <niche/language/platform>" | `/hindi-fonts-for-thumbnails/`, `/gaming-thumbnail-fonts/` |
 | Entity pages from data | "<item> specs / is <item> free for commercial use" | `/power-stations/<model>/`, `/font/<id>/` |
 | Guides | one how/what/why question each | "how long will a power station run a fridge" |

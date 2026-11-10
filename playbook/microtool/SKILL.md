@@ -6,10 +6,8 @@ description: Playbook for building and launching ad-supported micro tool website
 # Micro tool playbook
 
 The user (called "the owner" below: they own the site) builds small, free, single-purpose browser tools that
-earn from AdSense (later affiliates). Two live sites built this way, useful as references for what the finished
-result looks like: backupcalc.com (calculators) and thumbfont.com (a generator). If the owner has shipped tools
-from the starter before and they're cloned on this device, read them when in doubt (read-only, never edit them
-from another project).
+earn from AdSense (later affiliates). If the owner has shipped tools from the starter before and they're cloned
+on this device, read them when in doubt (read-only, never edit them from another project).
 
 **The starter** is the repo this skill was installed from (this skill's source is its `playbook/` folder). Its
 `CLAUDE.md` is the code standard (stack, folder structure, rules); its `plan.md` is the launch checklist; its
@@ -77,7 +75,7 @@ fork to keep starter changes, and don't push.
   between sessions.
 - **Ad safety:** never place ads beside tool controls, never any "click the ads" text, never buy traffic.
 
-## Lessons from BackupCalc and ThumbFont (don't relearn these)
+## Lessons from shipped tools (don't relearn these)
 
 - Static export needs `trailingSlash: true` + `html_handling: "auto-trailing-slash"`, and `dynamic = "force-static"`
   on route handlers (sitemap, robots, og.png, ads.txt). `generateStaticParams` + `dynamicParams = false` on dynamic routes.
