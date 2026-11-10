@@ -105,6 +105,44 @@ Other things to say inside a project:
 | "set up AdSense" | When to apply, what to change, what never to do |
 | "what should I write next?" | New pages picked from real searches and Search Console data |
 
+## Designing with Hallmark
+
+[Hallmark](https://github.com/nutlope/hallmark) is a free design skill for Claude Code. It's built to make pages
+that don't look AI-generated: it starts from one of 50 themes (paper, type, colour, texture), and it checks pages
+for low contrast, missing focus styles, broken phone layouts and the usual "AI look" tells.
+
+**You don't run it by hand.** When you say "design the site", the microtool skill uses Hallmark for you:
+
+1. Claude asks Hallmark for **three themes** that fit your tool's subject and builds a quick throwaway mock of
+   your homepage in each.
+2. **You pick one.** This is the only design decision you have to make. You can browse all the themes at
+   [usehallmark.com](https://usehallmark.com) if you want to suggest one.
+3. Claude writes the choice into `DESIGN.md`, sets the colours and fonts in `globals.css`, and restyles the shadcn
+   components to match. The mock is deleted; your site stays Next.js + Tailwind.
+4. **Before launch**, Claude runs `/hallmark audit` on the homepage and one guide, fixes what it finds, and logs
+   the result in `DESIGN.md`.
+
+**Install it once** (from setup above):
+
+```sh
+npx skills add nutlope/hallmark -g --agent claude-code
+```
+
+Or as a Claude Code plugin: `/plugin marketplace add nutlope/hallmark`, then `/plugin install hallmark@hallmark`
+(it's then called as `/hallmark:hallmark`). Hallmark needs Node 18+. For its in-browser checks, also install
+Chrome and `npm i -g puppeteer-core`; without them only its static checks run.
+
+**Using it yourself** (optional), in Claude Code inside a project:
+
+| Command | What it does |
+|---|---|
+| `/hallmark audit ./src/app` | Lists design and accessibility problems. Changes nothing |
+| `/hallmark redesign ./src/app` | Rebuilds the look but keeps your content and wiring. Add "keep the layout" for a lighter restyle |
+| "polish" (with redesign) | Fixes only the AI-look tells, nothing else |
+
+Check the diff after a redesign or polish: Hallmark writes plain HTML/CSS by default, and this site must stay
+Next.js + Tailwind using `src/components/ui/`.
+
 **Without Claude:** copy the repo, delete `.git/` and `playbook/`, rename `README.template.md` to `README.md`,
 then follow `CLAUDE.md`, `DESIGN.md` and `plan.md` yourself.
 
